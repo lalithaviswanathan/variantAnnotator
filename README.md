@@ -14,34 +14,34 @@ Annotation      : T|missense_variant|MODERATE|CCT8L2|ENSG00000198445|transcript|
 SubField number : 1|       2        |    3   |  4   |       5       |    6     |      7        |      8       | 9 |    10   |    11     |   12    |   13    |   14  |15| 16
 
 Here is a description of the meaning of each sub-field
-## Allele (or ALT): In case of multiple ALT fields, this helps to identify which ALT we are referring to. E.g.:
+1. Allele (or ALT): In case of multiple ALT fields, this helps to identify which ALT we are referring to. E.g.:
 #CHROM  POS     ID  REF  ALT    QUAL  FILTER  INFO     
 chr1    123456  .   C    A      .     .       ANN=A|...
 chr1    234567  .   A    G,T    .     .       ANN=G|... , T|...
 
-## Annotation (a.k.a. effect): Annotated using Sequence Ontology terms. Multiple effects can be concatenated using ‘&’.
+2. Annotation (a.k.a. effect): Annotated using Sequence Ontology terms. Multiple effects can be concatenated using ‘&’.
 #CHROM  POS     ID  REF  ALT  QUAL  FILTER  INFO     
 chr1    123456  .   C    A    .     .      ANN=A|intron_variant&nc_transcript_variant|...
 
-## Gene Name: Common gene name (HGNC). Optional: use closest gene when the variant is “intergenic”.
+3. Gene Name: Common gene name (HGNC). Optional: use closest gene when the variant is “intergenic”.
 
-## Gene ID: Gene ID
+4. Gene ID: Gene ID
 
-## Feature type: Which type of feature is in the next field (e.g. transcript, motif, miRNA, etc.). 
+5. Feature type: Which type of feature is in the next field (e.g. transcript, motif, miRNA, etc.). 
 
-## Feature ID: Depending on the annotation, this may be: Transcript ID (preferably using version number)
+6. Feature ID: Depending on the annotation, this may be: Transcript ID (preferably using version number)
 
-## Transcript biotype: The bare minimum is at least a description on whether the transcript is {“Coding”, “Noncoding”}. Whenever possible, use ENSEMBL biotypes.
+7. Transcript biotype: The bare minimum is at least a description on whether the transcript is {“Coding”, “Noncoding”}. Whenever possible, use ENSEMBL biotypes.
 
-## HGVS.c: Variant using HGVS notation (DNA level)
+8. HGVS.c: Variant using HGVS notation (DNA level)
 
-## HGVS.p: If variant is coding, this field describes the variant using HGVS notation (Protein level). 
+9. HGVS.p: If variant is coding, this field describes the variant using HGVS notation (Protein level). 
 
-## cDNA_position / cDNA_len: Position in cDNA and trancript’s cDNA length (one based).
+10. cDNA_position / cDNA_len: Position in cDNA and trancript’s cDNA length (one based).
 
-## CDS_position / CDS_len: Position and number of coding bases (one based includes START and STOP codons).
+11. CDS_position / CDS_len: Position and number of coding bases (one based includes START and STOP codons).
 
-## Protein_position / Protein_len: Position and number of AA (one based, including START, but not STOP).
+12. Protein_position / Protein_len: Position and number of AA (one based, including START, but not STOP).
 
 
 ## Prerequisites
