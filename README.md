@@ -14,47 +14,40 @@ Annotation      : T|missense_variant|MODERATE|CCT8L2|ENSG00000198445|transcript|
 SubField number : 1|       2        |    3   |  4   |       5       |    6     |      7        |      8       | 9 |    10   |    11     |   12    |   13    |   14  |15| 16
 
 Here is a description of the meaning of each sub-field
-Allele (or ALT): In case of multiple ALT fields, this helps to identify which ALT we are referring to. E.g.:
+## Allele (or ALT): In case of multiple ALT fields, this helps to identify which ALT we are referring to. E.g.:
 #CHROM  POS     ID  REF  ALT    QUAL  FILTER  INFO     
 chr1    123456  .   C    A      .     .       ANN=A|...
 chr1    234567  .   A    G,T    .     .       ANN=G|... , T|...
 
-Annotation (a.k.a. effect): Annotated using Sequence Ontology terms. Multiple effects can be concatenated using ‘&’.
+## Annotation (a.k.a. effect): Annotated using Sequence Ontology terms. Multiple effects can be concatenated using ‘&’.
 #CHROM  POS     ID  REF  ALT  QUAL  FILTER  INFO     
 chr1    123456  .   C    A    .     .      ANN=A|intron_variant&nc_transcript_variant|...
 
-Putative_impact: A simple estimation of putative impact / deleteriousness : {HIGH, MODERATE, LOW, MODIFIER}
+## Gene Name: Common gene name (HGNC). Optional: use closest gene when the variant is “intergenic”.
 
-Gene Name: Common gene name (HGNC). Optional: use closest gene when the variant is “intergenic”.
+## Gene ID: Gene ID
 
-Gene ID: Gene ID
+## Feature type: Which type of feature is in the next field (e.g. transcript, motif, miRNA, etc.). 
 
-Feature type: Which type of feature is in the next field (e.g. transcript, motif, miRNA, etc.). It is preferred to use Sequence Ontology (SO) terms, but ‘custom’ (user defined) are allowed. ANN=A|stop_gained|HIGH|||transcript|... Tissue specific features may include cell type / tissue information separated by semicolon e.g.: ANN=A|histone_binding_site|LOW|||H3K4me3:HeLa-S3|...
+## Feature ID: Depending on the annotation, this may be: Transcript ID (preferably using version number)
 
-Feature ID: Depending on the annotation, this may be: Transcript ID (preferably using version number), Motif ID, miRNA, ChipSeq peak, Histone mark, etc. Note: Some features may not have ID (e.g. histone marks from custom Chip-Seq experiments may not have a unique ID).
+## Transcript biotype: The bare minimum is at least a description on whether the transcript is {“Coding”, “Noncoding”}. Whenever possible, use ENSEMBL biotypes.
 
-Transcript biotype: The bare minimum is at least a description on whether the transcript is {“Coding”, “Noncoding”}. Whenever possible, use ENSEMBL biotypes.
+## HGVS.c: Variant using HGVS notation (DNA level)
 
-Rank / total: Exon or Intron rank / total number of exons or introns.
+## HGVS.p: If variant is coding, this field describes the variant using HGVS notation (Protein level). 
 
-HGVS.c: Variant using HGVS notation (DNA level)
+## cDNA_position / cDNA_len: Position in cDNA and trancript’s cDNA length (one based).
 
-HGVS.p: If variant is coding, this field describes the variant using HGVS notation (Protein level). Since transcript ID is already mentioned in ‘feature ID’, it may be omitted here.
+## CDS_position / CDS_len: Position and number of coding bases (one based includes START and STOP codons).
 
-cDNA_position / cDNA_len: Position in cDNA and trancript’s cDNA length (one based).
-
-CDS_position / CDS_len: Position and number of coding bases (one based includes START and STOP codons).
-
-Protein_position / Protein_len: Position and number of AA (one based, including START, but not STOP).
+## Protein_position / Protein_len: Position and number of AA (one based, including START, but not STOP).
 
 
 ## Prerequisites
 Python 2.x
 
-## Give examples
 ### Installing
-
-## Running the tests
 
 ## Built With
 
