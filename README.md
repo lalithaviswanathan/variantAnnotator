@@ -7,13 +7,8 @@ The below annotations are added to the VCF File.
 
 Functional annotations information is added to the INFO field using an ANN tag. The annotation 'ANN' field looks like this 
 ANN=T|missense_variant|MODERATE|CCT8L2|ENSG00000198445|transcript|ENST00000359963|protein_coding|1/1|c.1406G>A|p.Gly469Glu|1666/2034|1406/1674|469/557||,T|downstream_gene_variant|MODIFIER|FABP5P11|ENSG00000240122|transcript|ENST00000430910|processed_pseudogene||n.*397G>A|||||3944|
-A variant can have (and ususally has) more than one annotaion. Multiple annotations are separated by commas. In the previous example there were two annotations corresponding to different genes (CCT8L2 and FABP5P11). 
 
-Each annotation consists of multiple sub-fields separated by the pipe character "|" (fields 15 and 16 are empty in this example):
-Annotation      : T|missense_variant|MODERATE|CCT8L2|ENSG00000198445|transcript|ENST00000359963|protein_coding|1/1|c.1406G>A|p.Gly469Glu|1666/2034|1406/1674|469/557|  |
-SubField number : 1|       2        |    3   |  4   |       5       |    6     |      7        |      8       | 9 |    10   |    11     |   12    |   13    |   14  |15| 16
-
-Here is a description of the meaning of each sub-field
+## List of annotations
 1. Allele (or ALT): In case of multiple ALT fields, this helps to identify which ALT we are referring to. E.g.:
 #CHROM  POS     ID  REF  ALT    QUAL  FILTER  INFO     
 chr1    123456  .   C    A      .     .       ANN=A|...
