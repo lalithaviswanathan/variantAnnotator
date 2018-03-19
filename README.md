@@ -25,3 +25,4 @@ Lalitha Viswanathan
 Open Source License
 
 ## Acknowledgments
+http://snpeff.sourceforge.net/SnpEff_manual.html#input
